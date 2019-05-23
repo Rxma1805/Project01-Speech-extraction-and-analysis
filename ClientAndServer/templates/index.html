@@ -1,0 +1,53 @@
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS/HTML Workshop with Privateaser</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="{{ url_for('static', filename='js/form.js') }}"></script>
+	   <style>
+    .jumbotron{
+    background-color:#2E2D88;
+    color:white;
+    }
+    /* Adds borders for tabs */
+    .tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    }
+    .nav-tabs {
+    margin-bottom: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>请输入想要搜索的新闻内容</h1>
+
+    </div>
+</div>
+
+<div class="jumbotron">
+	<form class="form-inline">
+		<div class="form-group">
+	    <label class="sr-only" for="nameInput">Name</label>
+			<textarea class="form-control" id="nameInput" placeholder="message" rows=5 cols=100
+					  onpropertychange= "this.style.posHeight=this.scrollHeight "></textarea>
+	  	</div>
+		<div class="btn btn-group" role="group">
+			<button class="btn btn-info" id="btn1" type="button">Random news</button>
+			<button class="btn btn-info" id="btn2" type="submit">Submit</button>
+		</div>
+	</form>
+	<br>
+	<div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+</div>
+</body>
+</html>
+
