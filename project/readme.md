@@ -1,1 +1,1 @@
-python3.6  обткппform.py
+python3.6  Д╦▀Х©░Х║▄  form.py
